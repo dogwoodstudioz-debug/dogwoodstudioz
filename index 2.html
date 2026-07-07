@@ -909,6 +909,34 @@
       text-align: center;
       margin-top: 1rem;
     }
+    .form-success {
+      display: none;
+      background: rgba(46,75,61,0.3);
+      border: 1px solid rgba(46,75,61,0.5);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+      animation: slideDown 0.4s ease-out;
+    }
+    .form-success.show {
+      display: block;
+    }
+    .form-success-text {
+      font-family: 'Cinzel', serif;
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .form-success-subtext {
+      font-size: 0.75rem;
+      color: var(--ivory-dim);
+      text-align: center;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -998,118 +1026,102 @@
   <li><a onclick="showPage('contact'); toggleMenu()">Contact</a></li>
 </ul>
 
-<!-- ═══ HOME PAGE ═════════════════════════════════════════════ -->
+<!-- ═══ HOME ═════════════════════════════════════════════════ -->
 <div id="home" class="page active">
-
-  <section class="hero">
-    <div class="film-strip"></div>
+  <div class="hero">
     <div class="hero-bg"></div>
+    <div class="film-strip"></div>
+    <div class="film-strip-bottom"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Film Production & Cinematic Storytelling</p>
-      <h1 class="hero-title">DOGWOOD<br /><span>STUDIOZ</span></h1>
-      <p class="hero-descriptor">Independent Film ✦ Brand Films ✦ Documentary ✦ Event Cinema</p>
-      <div class="divider"><div class="divider-diamond"></div></div>
-      <p class="hero-tagline">Growing Cinematic Stories, Frame by Frame.</p>
+      <p class="hero-eyebrow">Cinematic Storytelling</p>
+      <h1 class="hero-title">Dogwood <span>Studioz</span></h1>
+      <p class="hero-descriptor">Film Production & Creative Direction</p>
+      <p class="hero-tagline">Every frame tells a story.</p>
       <div class="hero-cta">
         <button class="btn-primary" onclick="showPage('work')">View Our Work</button>
         <button class="btn-outline" onclick="showPage('contact')">Start a Project</button>
       </div>
     </div>
-    <div class="film-strip-bottom"></div>
-  </section>
+  </div>
 
-  <section class="services-strip">
-    <p class="section-label">What We Do</p>
-    <h2 class="section-title">Cinematic Services</h2>
-    <div class="divider"><div class="divider-diamond"></div></div>
+  <div class="services-strip">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-title">Our Services</h2>
+      <div class="divider"><div class="divider-diamond"></div></div>
+    </div>
     <div class="services-grid">
       <div class="service-item">
         <span class="service-icon">🎬</span>
-        <p class="service-name">Narrative Films</p>
-        <p class="service-desc">Original short films and independent productions crafted with intention and artistic vision.</p>
+        <h3 class="service-name">Narrative Films</h3>
+        <p class="service-desc">Compelling short and feature-length films that resonate with audiences.</p>
       </div>
       <div class="service-item">
-        <span class="service-icon">🎯</span>
-        <p class="service-name">Brand Films</p>
-        <p class="service-desc">Story-driven content for businesses and organizations that connects with real audiences.</p>
+        <span class="service-icon">🏢</span>
+        <h3 class="service-name">Brand Films</h3>
+        <p class="service-desc">Visual storytelling that elevates your brand and connects with your audience.</p>
+      </div>
+      <div class="service-item">
+        <span class="service-icon">📽️</span>
+        <h3 class="service-name">Documentaries</h3>
+        <p class="service-desc">In-depth documentaries that explore real stories with cinematic depth.</p>
       </div>
       <div class="service-item">
         <span class="service-icon">🎥</span>
-        <p class="service-name">Documentary</p>
-        <p class="service-desc">Authentic stories told through cinematic visuals – real people, real moments, real impact.</p>
-      </div>
-      <div class="service-item">
-        <span class="service-icon">🎞</span>
-        <p class="service-name">Event Films</p>
-        <p class="service-desc">Professional cinematic coverage of the moments that matter most to you.</p>
+        <h3 class="service-name">Event Films</h3>
+        <p class="service-desc">Professional coverage of events with a cinematic perspective.</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="featured-film">
-    <p class="section-label">Featured Work</p>
-    <h2 class="section-title">Latest Production</h2>
-    <div class="divider"><div class="divider-diamond"></div></div>
-    <div class="film-card" style="margin-top: 3rem;">
+  <div class="featured-film">
+    <div style="text-align: center; margin-bottom: 4rem;">
+      <p class="section-label">Recent Work</p>
+      <h2 class="section-title">Featured Film</h2>
+      <div class="divider"><div class="divider-diamond"></div></div>
+    </div>
+    <div class="film-card">
       <div class="film-visual">
-        <iframe
-          src="https://www.youtube.com/embed/D_d8ZmE4dyQ"
-          title="The Memory of You – Dogwood Studioz"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <div class="film-reel-art">
+          <div class="reel-circle"></div>
+          <div class="film-perfs">
+            <div class="film-perf"></div>
+            <div class="film-perf"></div>
+            <div class="film-perf"></div>
+            <div class="film-perf"></div>
+            <div class="film-perf"></div>
+          </div>
+        </div>
       </div>
       <div class="film-info">
-        <p class="film-year">2026 &nbsp;✦&nbsp; Short Film</p>
-        <h3 class="film-title">The Memory of You</h3>
+        <p class="film-year">2024</p>
+        <h3 class="film-title">Project Title</h3>
         <div class="film-meta">
-          <span>Drama</span>
-          <span>Non-Linear</span>
-          <span>Dual Narrative</span>
+          <span>Directed by [Name]</span>
+          <span>10 min</span>
         </div>
-        <p class="film-synopsis">
-          Two best friends, a hidden journal, and everything that was never said. A non-linear story about grief and unspoken love, told through dual voiceover and layered flashbacks. The film explores what remains when memory is the only bridge left between two people.
-        </p>
-        <p class="film-roles">Written · Directed · Edited by Spencer Griffis</p>
+        <p class="film-synopsis">A brief synopsis of your featured film. Tell your audience what makes this project special and why they should watch it. This is your opportunity to showcase your storytelling vision.</p>
+        <p class="film-roles"><strong>Roles:</strong> Director, Cinematographer, Editor</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="about-teaser">
+  <div class="about-teaser">
     <div class="about-teaser-inner">
-      <p class="section-label">The Studio</p>
-      <div class="divider"><div class="divider-diamond"></div></div>
-      <p class="about-quote">Every story deserves to be cultivated with care — from the first frame to the last.</p>
-      <p style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--ivory-dim); margin: 1.5rem 0 2.5rem;">
-        Dogwood Studioz is an independent film production company based in North Carolina,
-        dedicated to cinematic stories that connect, inspire, and endure.
-      </p>
-      <button class="btn-outline" onclick="showPage('about')">Our Story</button>
+      <p class="section-label">Our Philosophy</p>
+      <p class="about-quote">Every film is an opportunity to create something that moves people.</p>
+      <p style="font-size: 0.85rem; color: rgba(185,145,77,0.6); margin-top: 1.5rem;">We believe in the power of visual storytelling to inspire, connect, and transform.</p>
     </div>
-  </section>
-
-  <footer>
-    <p class="footer-logo">DOGWOOD STUDIOZ</p>
-    <p class="footer-tag">Growing Cinematic Stories, Frame by Frame.</p>
-    <ul class="footer-links">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('work')">Work</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Dogwood Studioz LLC · Willow Spring, NC · hello@dogwoodstudioz.com</p>
-  </footer>
+  </div>
 </div>
 
-<!-- ═══ ABOUT ═════════════════════════════════════════════════ -->
+<!-- ═══ ABOUT ════════════════════════════════════════════════ -->
 <div id="about" class="page">
-
   <section class="about-hero">
-    <p class="section-label">Our Story</p>
+    <p class="section-label">Get To Know Us</p>
     <h1 class="section-title">About Dogwood Studioz</h1>
     <div class="divider"><div class="divider-diamond"></div></div>
-    <p class="section-subtitle">Independent. Intentional. Cinematic.</p>
+    <p class="section-subtitle">Crafting stories with intention and vision.</p>
   </section>
 
   <div class="about-body">
@@ -1119,143 +1131,116 @@
         <div class="portrait-corner tr"></div>
         <div class="portrait-corner bl"></div>
         <div class="portrait-corner br"></div>
-        <div class="portrait-placeholder">Portrait placeholder — add your image here</div>
+        <div class="portrait-placeholder">📸<br/>Your Portrait Here</div>
       </div>
     </div>
+
     <div class="about-text">
-      <h2>Spencer Griffis</h2>
-      <p class="title-role">Founder & Filmmaker</p>
-      <p>
-        Dogwood Studioz is a North Carolina–based independent film production company
-        founded by writer-director-editor Spencer Griffis. Built on a belief that
-        cinematic storytelling should be thoughtful, human, and emotionally honest,
-        the studio approaches every project with the same care – whether it's a
-        personal short film or a brand story for a local business.
-      </p>
-      <p>
-        Spencer writes, directs, and edits his own work, with a background spanning
-        narrative fiction, documentary, and visual storytelling. His debut short film,
-        <em>The Memory of You</em>, established the studio's voice: layered, non-linear,
-        and rooted in the quiet weight of human connection.
-      </p>
-      <p>
-        Based in North Carolina with active work across the region, Dogwood Studioz
-        is currently expanding its portfolio and taking on select client projects
-        alongside its original productions.
-      </p>
-      <p>
-        As a college student, Spencer brings a relentless drive for growth to every
-        frame – continuously expanding his knowledge, sharpening his skills, seeking
-        out meaningful experiences, and building connections with fellow creatives
-        and collaborators who share a passion for storytelling.
-      </p>
+      <h2>Our Story</h2>
+      <p class="title-role">Filmmaker & Creative Director</p>
+      <p>Founded on a passion for cinematic storytelling, Dogwood Studioz creates films that captivate and inspire. We combine technical expertise with creative vision to bring your stories to life.</p>
+      <p>Whether you're a brand looking to connect with your audience or a filmmaker seeking a creative partner, we're here to turn your vision into compelling visual content.</p>
       <div class="about-stats">
         <div class="stat">
-          <span class="stat-number">1</span>
-          <span class="stat-label">Feature Short</span>
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Projects</span>
         </div>
         <div class="stat">
-          <span class="stat-number">NC</span>
-          <span class="stat-label">Based</span>
+          <span class="stat-number">8+</span>
+          <span class="stat-label">Years</span>
         </div>
         <div class="stat">
           <span class="stat-number">∞</span>
-          <span class="stat-label">Stories Left</span>
+          <span class="stat-label">Passion</span>
         </div>
       </div>
     </div>
   </div>
 
-  <section class="brand-values">
-    <p class="section-label">Brand Identity</p>
-    <h2 class="section-title">What We Stand For</h2>
-    <div class="divider"><div class="divider-diamond"></div></div>
+  <div class="brand-values">
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <p class="section-label">Our Values</p>
+      <h2 class="section-title">What Drives Us</h2>
+    </div>
     <div class="values-grid">
-      <div class="value-item"><p class="value-word">Cinematic</p></div>
-      <div class="value-item"><p class="value-word">Creative</p></div>
-      <div class="value-item"><p class="value-word">Authentic</p></div>
-      <div class="value-item"><p class="value-word">Human</p></div>
-      <div class="value-item"><p class="value-word">Professional</p></div>
-      <div class="value-item"><p class="value-word">Imaginative</p></div>
-    </div>
-    <div style="max-width:680px; margin: 4rem auto 0; text-align:center;">
-      <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--ivory-dim); line-height:1.8;">
-        Our mission is to create cinematic stories that leave a lasting impact. Through
-        thoughtful filmmaking and creative vision, we transform ideas, moments, and
-        experiences into compelling visual narratives.
-      </p>
-    </div>
-  </section>
-
-  <footer>
-    <p class="footer-logo">DOGWOOD STUDIOZ</p>
-    <p class="footer-tag">Growing Cinematic Stories, Frame by Frame.</p>
-    <ul class="footer-links">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('work')">Work</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Dogwood Studioz LLC · Willow Spring, NC · hello@dogwoodstudioz.com</p>
-  </footer>
-</div>
-
-<!-- ═══ WORK ══════════════════════════════════════════════════ -->
-<div id="work" class="page">
-
-  <section class="work-hero">
-    <p class="section-label">Portfolio</p>
-    <h1 class="section-title">Our Work</h1>
-    <div class="divider"><div class="divider-diamond"></div></div>
-    <p class="section-subtitle">Stories told with intention.</p>
-  </section>
-
-  <div style="max-width:1100px; margin: 0 auto; padding: 5rem 2rem;">
-    <div class="work-grid">
-      <div class="work-item">
-        <div class="work-visual">
-          <iframe
-            src="https://www.youtube.com/embed/D_d8ZmE4dyQ"
-            title="The Memory of You – Dogwood Studioz"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div class="work-caption">
-          <p class="work-caption-title">The Memory of You</p>
-          <p class="work-caption-meta">Short Film &nbsp;✦&nbsp; 2026 &nbsp;✦&nbsp; Drama</p>
-          <p class="work-caption-desc">
-            Two best friends, a hidden journal, and everything that was never said. A non-linear story about grief and unspoken love, told through dual voiceover and layered flashbacks.
-          </p>
-        </div>
+      <div class="value-item">
+        <p class="value-word">Authenticity</p>
       </div>
-
-      <div class="work-coming-soon">
-        <div class="divider" style="margin-bottom:1.5rem;"><div class="divider-diamond"></div></div>
-        <p class="coming-soon-text">More productions coming soon.</p>
-        <p style="font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(185,145,77,0.4); margin-top:1rem;">
-          New work in development
-        </p>
-        <button class="btn-outline" style="margin-top:2rem;" onclick="showPage('contact')">Collaborate With Us</button>
+      <div class="value-item">
+        <p class="value-word">Innovation</p>
+      </div>
+      <div class="value-item">
+        <p class="value-word">Craft</p>
+      </div>
+      <div class="value-item">
+        <p class="value-word">Storytelling</p>
       </div>
     </div>
   </div>
-
-  <footer>
-    <p class="footer-logo">DOGWOOD STUDIOZ</p>
-    <p class="footer-tag">Growing Cinematic Stories, Frame by Frame.</p>
-    <ul class="footer-links">
-      <li><a onclick="showPage('home')">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('work')">Work</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
-    </ul>
-    <p class="footer-copy">© 2025 Dogwood Studioz LLC · Willow Spring, NC · hello@dogwoodstudioz.com</p>
-  </footer>
 </div>
 
-<!-- ═══ CONTACT ═══════════════════════════════════════════════ -->
+<!-- ═══ WORK ═════════════════════════════════════════════════ -->
+<div id="work" class="page">
+  <section class="work-hero">
+    <p class="section-label">Browse Our Work</p>
+    <h1 class="section-title">Our Portfolio</h1>
+    <div class="divider"><div class="divider-diamond"></div></div>
+    <p class="section-subtitle">A collection of stories we've had the privilege to tell.</p>
+  </section>
+
+  <div class="work-grid">
+    <div class="work-item">
+      <div class="work-visual">
+        <div class="work-visual-inner">
+          <div class="work-visual-emoji">🎬</div>
+          <div class="work-visual-label">Project One</div>
+        </div>
+        <div class="work-overlay"></div>
+      </div>
+      <div class="work-caption">
+        <h3 class="work-caption-title">Project One</h3>
+        <p class="work-caption-meta">2024 • 5 min</p>
+        <p class="work-caption-desc">A brief description of your film project and what makes it special.</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-visual">
+        <div class="work-visual-inner">
+          <div class="work-visual-emoji">🎞️</div>
+          <div class="work-visual-label">Project Two</div>
+        </div>
+        <div class="work-overlay"></div>
+      </div>
+      <div class="work-caption">
+        <h3 class="work-caption-title">Project Two</h3>
+        <p class="work-caption-meta">2024 • 8 min</p>
+        <p class="work-caption-desc">A brief description of your film project and what makes it special.</p>
+      </div>
+    </div>
+
+    <div class="work-item">
+      <div class="work-visual">
+        <div class="work-visual-inner">
+          <div class="work-visual-emoji">📽️</div>
+          <div class="work-visual-label">Project Three</div>
+        </div>
+        <div class="work-overlay"></div>
+      </div>
+      <div class="work-caption">
+        <h3 class="work-caption-title">Project Three</h3>
+        <p class="work-caption-meta">2024 • 6 min</p>
+        <p class="work-caption-desc">A brief description of your film project and what makes it special.</p>
+      </div>
+    </div>
+
+    <div class="work-coming-soon">
+      <p class="coming-soon-text">More projects coming soon...</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONTACT ═════════════════════════════════════════════ -->
 <div id="contact" class="page">
 
   <section class="contact-hero">
@@ -1311,30 +1296,37 @@
 
     <div class="contact-form-wrap">
       <h3>Send a Message</h3>
-      <div class="form-group">
-        <label class="form-label">Your Name</label>
-        <input type="text" class="form-input" placeholder="Full name" />
+      <div class="form-success" id="formSuccess">
+        <p class="form-success-text">✓ Message Sent!</p>
+        <p class="form-success-subtext">Thank you for reaching out. We'll get back to you within 24–48 hours.</p>
       </div>
-      <div class="form-group">
-        <label class="form-label">Email Address</label>
-        <input type="email" class="form-input" placeholder="your@email.com" />
-      </div>
-      <div class="form-group">
-        <label class="form-label">Project Type</label>
-        <select class="form-select form-input">
-          <option value="" disabled selected>Select a service</option>
-          <option>Narrative Film</option>
-          <option>Brand Film</option>
-          <option>Documentary</option>
-          <option>Event Film</option>
-          <option>Collaboration / Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label class="form-label">Tell Us About Your Project</label>
-        <textarea class="form-textarea" placeholder="Share your vision, timeline, and any details that will help us understand your project…"></textarea>
-      </div>
-      <button class="form-submit">Send Message</button>
+      <form name="contact" method="POST" netlify netlify-honeypot="bot-field" id="contactForm">
+        <input type="hidden" name="bot-field" />
+        <div class="form-group">
+          <label class="form-label">Your Name</label>
+          <input type="text" class="form-input" name="name" placeholder="Full name" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-input" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Project Type</label>
+          <select class="form-select form-input" name="project-type" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Narrative Film</option>
+            <option>Brand Film</option>
+            <option>Documentary</option>
+            <option>Event Film</option>
+            <option>Collaboration / Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tell Us About Your Project</label>
+          <textarea class="form-textarea" name="message" placeholder="Share your vision, timeline, and any details that will help us understand your project…" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
       <p class="form-note">We typically respond within 24–48 hours.</p>
     </div>
   </div>
@@ -1357,30 +1349,43 @@
   function showPage(id) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     document.getElementById(id).classList.add('active');
-    document.querySelectorAll('.nav-links a').forEach(a => {
-      a.classList.toggle('active', a.dataset.page === id);
-    });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    document.querySelector(`[data-page="${id}"]`).classList.add('active');
   }
 
   function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  // Close mobile menu on outside click
-  document.addEventListener('click', function(e) {
     const menu = document.getElementById('mobileMenu');
     const hamburger = document.getElementById('hamburger');
-    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-      menu.classList.remove('open');
-    }
-  });
+    menu.classList.toggle('open');
+    hamburger.style.opacity = menu.classList.contains('open') ? '0.6' : '1';
+  }
 
-  // Nav shadow on scroll
-  window.addEventListener('scroll', function() {
-    document.querySelector('nav').style.boxShadow =
-      window.scrollY > 20 ? '0 4px 30px rgba(0,0,0,0.5)' : 'none';
+  // Handle contact form submission
+  const contactForm = document.getElementById('contactForm');
+  const successMessage = document.getElementById('formSuccess');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Show success message
+    successMessage.classList.add('show');
+
+    // Submit form to Netlify
+    const formData = new FormData(contactForm);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // Reset form fields
+      contactForm.reset();
+      // Scroll success message into view
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    })
+    .catch(error => console.log(error));
   });
 </script>
+
 </body>
 </html>
